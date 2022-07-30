@@ -14,19 +14,8 @@ class Playground(Scene):
             [45, 44, 32, 37, 23],
             [36, 33, 19, 21, 6],
             [75, 66, 51, 53, 34]
-        ], 0, 0, 3, 4, self)
+        ], 0, 0, 1, 1, self)
 
-        example = MathTex(r"28 + 23 \le 44 + 24", substrings_to_isolate=["28", "23", "44", "24"])
-        example.set_color_by_tex("28", BLUE)
-        example.set_color_by_tex("23", BLUE)
-        example.set_color_by_tex("44", YELLOW)
-        example.set_color_by_tex("24", YELLOW)
-
-
-        example.shift(RIGHT)
-        example.shift(RIGHT)
-        example.shift(RIGHT)
-        self.add(example)
 
         self.wait(10)
 
