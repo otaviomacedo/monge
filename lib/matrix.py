@@ -4,8 +4,8 @@ from manim import *
 v_buff = 0.8
 h_buff = 1.3
 
-def newMatrix(matrix, rectangles, scene):
-    original = makeMatrix(matrix, lambda p, q: WHITE)
+def animate(matrix, rectangles, scene):
+    original = make_matrix(matrix, lambda p, q: WHITE)
     original.shift(3 * LEFT)
 
     column_width = (original.width - 2 * MED_SMALL_BUFF) / len(matrix[0])
@@ -37,7 +37,7 @@ def newMatrix(matrix, rectangles, scene):
                 return YELLOW
             return WHITE
         
-        colored = makeMatrix(matrix, colorCorners)
+        colored = make_matrix(matrix, colorCorners)
         colored.shift(3 * LEFT)
 
         example = MathTex(f"{top_left} + {bottom_right} \le {botttom_left} + {top_right}", substrings_to_isolate=[top_right, top_left, bottom_right, botttom_left])
@@ -58,7 +58,7 @@ def newMatrix(matrix, rectangles, scene):
         scene.remove(example)
         scene.remove(r)
 
-def makeMatrix(matrix, color_fn):
+def make_matrix(matrix, color_fn):
     texMatrix = []
     for p in range(0, len(matrix)):
         row = []
